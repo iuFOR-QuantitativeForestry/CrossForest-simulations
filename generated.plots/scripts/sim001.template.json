@@ -1,0 +1,14 @@
+{
+  "name": "Experimento HPC sim001", "overwrite_output_file": "YES", "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/sim001/output/out__idnumber__10-60", "decimal_numbers": 2, "zip_compression": "NO",
+  "operations": {
+    "operation_0" :{"name": "Inicio", "description": "Carga de datos", "model_path": "models.load.basic_load", "model_class": "BasicLoad", "operation": "LOAD",
+      "variables": {"init": 25, "time": 0, "input": "/scratch/uva_iufor_1/uva_iufor_1_3/sim001/input/input.en__idnumber_.10.60sp999.xlsx"} },
+    "operation_1" :{"name": "Inicio", "description": "Inicialización de datos", "model_path": "models.trees.test999", "model_class": "test", "operation": "INIT", "variables": { "time": 0 } },
+    "operation_2":{      "name": "Simulacion 5",      "description": "Simulación durante 5 años",      "model_path": "models.trees.test999",      "model_class": "test",      "operation": "EXECUTION",
+      "variables": {        "time": 5,        "min_age": 5,        "max_age": 35      }    },
+    "operation_3":{      "name": "Simulacion 10",      "description": "Simulación durante 5 años",      "model_path": "models.trees.test999",      "model_class": "test",      "operation": "EXECUTION",
+      "variables": {        "time": 5,        "min_age": 10,        "max_age": 40      }    },
+    "operation_4":{      "name": "Harvest",      "description": "Corta",      "model_path": "models.harvest.cut_down_by_smallest",      "model_class": "CutDownBySmallest",      "operation": "HARVEST",
+      "variables": {        "time": 0,        "cut_down": "PERCENTOFTREES",        "volumen": 10,        "min_age": 15,        "max_age": 45      }    }
+  }
+}

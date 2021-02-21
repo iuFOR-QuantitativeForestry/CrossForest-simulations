@@ -1,0 +1,309 @@
+  697  squeue 
+  698  ll
+  699  squeue 
+  700  ll
+  701  squeue 
+  702  exit
+  703  cd ..
+  704  ll
+  705  cd COMUNES/
+  706  ll
+  707  cd auto
+  708  ll
+  709  ll logs/
+  710  cat launch.sh 
+  711  exit
+  712  ls auto/
+  713  cat auto/launch.sh 
+  714  ls /home/uva_iufor_1/uva_iufor_1_3/auto/logs/
+  715  ls /home/uva_iufor_1/COMUNES/simanfor/simulator/simulator
+  716  ls /scratch/uva_iufor_1/uva_iufor_1_3
+  717  ll
+  718  ls /home/uva_iufor_1/uva_iufor_1_3/auto/logs/
+  719  exit
+  720  cd $SCRATCH
+  721  ll
+  722  mkdir $SCRATCH/sim002
+  723  ll
+  724  ll $HOME_GROUP
+  725  ll $HOME_GROUP/simanfor
+  726  ll \$HOME_GROUP/simanfor/output 
+  727  ll $HOME_GROUP/simanfor/output 
+  728  ll $HOME_GROUP/simanfor/output/simul 
+  729  ll
+  730  mkdir $SCRATCH/sim001
+  731  ll
+  732  ll $HOME_GROUP/simanfor/data/simul 
+  733  mv $HOME_GROUP/simanfor/data/simul/sim001 sim001 
+  734  mv $HOME_GROUP/simanfor/data/simul/sim002 sim002 
+  735  mv $HOME_GROUP/simanfor/output/simul/sim002 sim002 
+  736  mv $HOME_GROUP/simanfor/scenario/simul/sim002 sim002 
+  737  ll $HOME_GROUP/simanfor/ 
+  738  ll $HOME_GROUP/simanfor/output 
+  739  ll $HOME_GROUP/simanfor/output/simul 
+  740  ll $HOME_GROUP/simanfor/output/simul/sim001 
+  741  mv $HOME_GROUP/simanfor/output/simul/sim001 sim001
+  742  mv $HOME_GROUP/simanfor/output/simul/sim001 sim001/output
+  743  mv $HOME_GROUP/simanfor/output/simul/sim002 sim002/output
+  744  mv $HOME_GROUP/simanfor/scenario/simul/sim002 sim002/scenario
+  745  mv $HOME_GROUP/simanfor/scenario/simul/sim001 sim001/scenario
+  746  exit
+  747  ./scripts/sim003.sh 
+  748  chmod +x ./scripts/sim003.*
+  749  ./scripts/sim003.sh 
+  750  cat ./scripts/sim003.sh 
+  751  chmod +x ./scripts/sim003.*
+  752  ./scripts/sim003.sh 
+  753  chmod +x ./scripts/sim003.*
+  754  cat ./scripts/sim003.sh 
+  755  ./scripts/sim003.sh 
+  756  ls /scratch/uva_iufor_1/uva_iufor_1_3_
+  757  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003
+  758  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/input/
+  759  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/scenario/
+  760  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/output/
+  761  cat /scratch/uva_iufor_1/uva_iufor_1_3/sim003/scenario/scnr_sp999_1_100-100.json 
+  762  cat ./scripts/sim003.job.array.100-100.sh 
+  763  squeue 
+  764  ./scripts/sim003.job.array.100-100.sh_ 
+  765  chmod +x ./scripts/sim003.*
+  766  ./scripts/sim003.job.array.100-100.sh
+  767  squeue 
+  768  cat ./scripts/sim003.job.array.100-100.sh
+  769  $SCRATCH/
+  770  echo $SCRATCH/
+  771  exit
+  772  ls $SCRATCH/sim003/input 
+  773  ls $SCRATCH/sim003/scenario
+  774  cat $SCRATCH/sim003/scenario/scnr_sp999_1_100-100.json 
+  775  chmod +x ./scripts/sim003.*
+  776  ./scripts/sim003.sh
+  777  cat $SCRATCH/sim003/scenario/scnr_sp999_1_100-100.json 
+  778  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/input/
+  779  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/output/
+  780  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/out*
+  781  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim003/*
+  782  ./scripts/sim003.job.array.100-100.sh 
+  783  cat ./scripts/sim003.job.array.100-100.sh 
+  784  ll
+  785  ls $SCRATCH 
+  786  ls $SCRATCH/sim003 
+  787  ls $SCRATCH/sim002
+  788  ls $SCRATCH/sim001
+  789  ls $SCRATCH/sim003
+  790  ls $SCRATCH/sim003/output
+  791  ls $SCRATCH/sim003/input
+  792  ll $SCRATCH/sim003/input
+  793  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim003/scenario
+  794  sbatch ./scripts/sim003.job.array.100-100.sh 
+  795  squeue 
+  796  exit
+  797  cat ./scripts/sim004.sh 
+  798  ./scripts/sim004.sh 
+  799  chmod +x ./scripts/sim004.sh 
+  800  ./scripts/sim004.sh 
+  801  squeue 
+  802  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim003/scenario
+  803  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim004/scenario
+  804  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim004/input
+  805  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim004/output
+  806  sbatch ./scripts/sim004.job.array.80-100.sh 
+  807  squeue 
+  808  exit
+  809  chmod +x ./scripts/sim005.sh 
+  810  ./scripts/sim005.sh 
+  811  squeue 
+  812  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim004/output
+  813  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim003/output
+  814  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim002/output
+  815  ll /home/uva_iufor_1/COMUNES/simanfor/output/simul/sim003
+  816  ll /home/uva_iufor_1/COMUNES/simanfor/output/simul/sim002
+  817  ll /home/uva_iufor_1/COMUNES/simanfor/output/simul/
+  818  ll /home/uva_iufor_1/COMUNES/simanfor/output
+  819  ll /home/uva_iufor_1/COMUNES/simanfor/
+  820  ll
+  821  cat sim002-array_491701_1.e
+  822  exit
+  823  sbatch ./scripts/sim003.job.test.sh 
+  824  squeue 
+  825  sbatch ./scripts/sim004.job.test.sh 
+  826  squeue 
+  827  ls
+  828  ll sim003-test.*
+  829  ll sim00?-test.*
+  830  squeue 
+  831  ll sim00?-test.*
+  832  squeue 
+  833  ll sim003-test.*
+  834  ll sim00?-test.*
+  835  cat sim003-test.e
+  836  exit
+  837  cat ./scripts/sim005.job.test.sh 
+  838  ls/scratch/uva_iufor_1/uva_iufor_1_3/sim005/scenario/scnr_sp999_1_10-100.json
+  839  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim005/scenario/scnr_sp999_1_10-100.json
+  840  sbatch ./scripts/sim005.job.test.sh 
+  841  exit
+  842  cat ./scripts/sim004.job.test.sh 
+  843  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim004/scenario/scnr_sp999_1_80-100.json
+  844  ll /home/uva_iufor_1/COMUNES/simanfor/simulator/simulator
+  845  ./scripts/sim004.job.test.sh 
+  846  chmod +x ./scripts/*.sh
+  847  ./scripts/sim004.job.test.sh 
+  848  sbatch ./scripts/sim004.job.test.sh 
+  849  squeue 
+  850  chmod +x ./scripts/*.sh
+  851  cat ./scripts/sim003.job.test.sh 
+  852  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim003/scenario/scnr_sp999_1_100-100.json
+  853  sbatch ./scripts/sim003.job.test.sh 
+  854  squeue 
+  855  exit
+  856  squeue 
+  857  exit
+  858  squeue 
+  859  exit
+  860  squeue 
+  861  ll
+  862  squeue 
+  863  ll
+  864  ll ./scripts/sim00?.sh 
+  865  chmnod +x ./scripts/sim00?.sh 
+  866  ll ./scripts/sim00?.sh 
+  867  chmnod +x ./scripts/sim006.sh 
+  868  chmod +x ./scripts/sim006.sh 
+  869  ll ./scripts/sim00?.sh 
+  870  cat ./scripts/sim006.sh 
+  871  ./scripts/sim006.sh 
+  872  squeue 
+  873  cat ./scripts/sim003.job.test.sh 
+  874  ll ./scripts/sim00?.job.test.sh 
+  875  cat ./scripts/sim006.job.test.sh 
+  876  ./scripts/sim006.job.test.sh 
+  877  sbatch ./scripts/sim006.job.test.sh 
+  878  squeue 
+  879  exit
+  880  sbatch ./scripts/sim005.job.array.10-100.sh 
+  881  squeue 
+  882  sbatch ~/scripts/sim006.make.input.hpc.sh 8 50 100
+  883  squeue 
+  884  ls
+  885  ll RScrpt.Plot.Generator.sim006-492*
+  886  cat RScrpt.Plot.Generator.sim006-492178.e
+  887  sbatch ~/scripts/sim006.make.input.hpc.sh 8 50 100
+  888  ll RScrpt.Plot.Generator.sim006-492*
+  889  cat RScrpt.Plot.Generator.sim006-492179.e
+  890  chmod +x ~/scripts/PlotsGenerator.R 
+  891  sbatch ~/scripts/sim006.make.input.hpc.sh 8 50 100
+  892  ll RScrpt.Plot.Generator.sim006-492*
+  893  squeue 
+  894  cat ./scripts/sim006.job.test.sh 
+  895  sbatch ./scripts/sim006.job.test.sh 
+  896  exit
+  897  squeue 
+  898  ll sim00?-test.*
+  899  ll
+  900  exit
+  901  ~/scripts/sim001.sh
+  902  ~/scripts/sim002.sh
+  903  squeue 
+  904  ll sm4_simul_sim001-array_n1_492247_4294967294.*
+  905  ll sm4_simul_sim002-array_492248_4294967294.
+  906  ll sm4_simul_sim002-array_492248_4294967294.*
+  907  squeue 
+  908  exit
+  909  cat ./scripts/sim002.job.test.sh 
+  910  sbatch ./scripts/sim002.job.test.sh 
+  911  squeue 
+  912  cat ./scripts/sim001.job.test.sh 
+  913  sbatch ./scripts/sim001.job.test.sh 
+  914  squeue 
+  915  cat ./scripts/sim001.sh 
+  916  cat ./scripts/sim002.sh 
+  917  ./scripts/sim001.sh 
+  918  ./scripts/sim002.sh 
+  919  ll
+  920  ls
+  921  ll sm4_simul_sim00* 
+  922  ls sm4_simul_sim00* 
+  923  ls sm4_simul_sim001* 
+  924  ll sm4_simul_sim001* 
+  925  ll sm4_simul_sim002* 
+  926  cat sm4_simul_sim002-array_492246_4294967294.o 
+  927  cat sm4_simul_sim001-array_n1_492245_4294967294.0
+  928  cat sm4_simul_sim001-array_n1_492245_4294967294.o
+  929  cat sm4_simul_sim001-array_n1_492245_4294967294.e
+  930  ll sm4_simul_sim002* 
+  931  ll sm4_simul_sim001* 
+  932  ll ./scripts/sim007*
+  933  cat ./scripts/sim007.make.input.hpc.sh 
+  934  chmod +x ./scripts/sim007*
+  935  ll ./scripts/sim007*
+  936  ll ./scripts/sim007.sh 
+  937  ./scripts/sim007.sh 
+  938  squeue 
+  939  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/input
+  940  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim007/input
+  941  squeue 
+  942  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim007/input
+  943  sbatch ./scripts/sim007.job.test.sh 
+  944  squeue 
+  945  ll
+  946  squeue 
+  947  ls /scratch/uva_iufor_1/uva_iufor_1_3/sim007/output
+  948  cat ./scripts/sim007.job.test.sh 
+  949  sbatch ./scripts/sim007.job.test.sh 
+  950  squeue 
+  951  ll
+  952  cat sm4_simul_sim007-test.o
+  953  exit
+  954  ll
+  955  cd ../COMUNES/simanfor/scripts.ejemplos/
+  956  ll
+  957  cd SCAYLE/
+  958  ll
+  959  vim sim007.job.array.5-100.sh 
+  960  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/scenario/
+  961  cd ..
+  962  cd COMUNES/simanfor/scripts.ejemplos/
+  963  ll
+  964  cd SCAYLE/
+  965  ll
+  966  vim sim007.job.array.5-100.sh 
+  967  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/
+  968  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/input/
+  969  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/output/
+  970  ll /scratch/uva_iufor_1/uva_iufor_1_3/sim007/scenario/
+  971  cd
+  972  ll
+  973  cd scripts/
+  974  ll
+  975  cd ..
+  976  cd COMUNES/simanfor/scripts.ejemplos/SCAYLE/
+  977  ll
+  978  vim sim007.job.array.5-100.sh 
+  979  cd ..
+  980  cd COMUNES/simanfor/scripts.ejemplos/SCAYLE/
+  981  ll
+  982  sbatch sim007.job.array.5-100.sh 
+  983  squeue 
+  984  ll out.log 
+  985  cd $SCRATCH
+  986  ll
+  987  cd sim007/
+  988  ll
+  989  cd output/
+  990  ll
+  991  squeue 
+  992  scontrol show job 492661
+  993  squeue 
+  994  ll
+  995  ls -la | wc 
+  996  ls -la | wc -l
+  997  pwd
+  998  ls -la | wc -l
+  999  squeue 
+ 1000  squeue 
+ 1001  ls -la | wc -l
+ 1002  pwd
+ 1003  scontrol show job 492661
+ 1004  history
+
