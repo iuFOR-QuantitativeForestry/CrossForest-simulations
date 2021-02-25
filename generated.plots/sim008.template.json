@@ -1,0 +1,32 @@
+{
+  "name":"Experimento HPC sim008", "overwrite_output_file":"YES", "output_path":"/scratch/uva_iufor_1/uva_iufor_1_3/sim008/output/out__idnumber__5-100", "decimal_numbers":2, "zip_compression":"NO",
+  "operations":{
+    "operation_0":{"name":"Inicio", "description":"Carga de datos", "model_path":"models.load.basic_load", "model_class":"BasicLoad", "operation":"LOAD",
+                     "variables":{"init":25, "time":0, "input":"/scratch/uva_iufor_1/uva_iufor_1_3/sim008/input/input.en__idnumber_.5.100sp999.xlsx"}},
+    "operation_1": {"name": "Inicio",      "description":"Inicialización de datos",   "model_path":"models.trees.test999", "model_class":"test", "operation":"INIT",      "variables":{"time":0}},
+    "operation_2": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age": 5, "max_age": 35}},
+    "operation_3": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":10, "max_age": 40}},
+    "operation_4": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":15, "max_age": 45}},
+    "operation_5": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":20, "max_age": 50}},
+    "operation_6": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":35, "max_age": 55}},
+    "operation_7": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":40, "max_age": 60}},
+    "operation_8": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":45, "max_age": 65}},
+    "operation_9": {"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":50, "max_age": 70}},
+    "operation_10":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":55, "max_age": 75}},
+    "operation_11":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":60, "max_age": 80}},
+    "operation_12":{"name":"Harvest", "description":"Corta", "model_path":"models.harvest.cut_down_by_smallest", "model_class":"CutDownBySmallest", "operation":"HARVEST", "variables":{ "time":0, "cut_down":"PERCENTOFTREES", "volumen":10, "min_age":65, "max_age":85}},
+    "operation_13":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":65, "max_age": 85}},
+    "operation_14":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":65, "max_age": 85}},
+    "operation_15":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":70, "max_age": 90}},
+    "operation_16":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":75, "max_age": 95}},
+    "operation_17":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":80, "max_age": 100}},
+    "operation_18":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":85, "max_age": 105}},
+    "operation_19":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":90, "max_age": 110}},
+    "operation_20":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":95, "max_age": 115}},
+    "operation_21":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":100,"max_age": 120}},
+    "operation_22":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":105,"max_age": 125}},
+    "operation_23":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":110,"max_age": 130}},
+    "operation_24":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":115,"max_age": 135}},
+    "operation_25":{"name":"Simulacion 5", "description":"Simulación durante 5 años", "model_path":"models.trees.test999", "model_class":"test", "operation":"EXECUTION", "variables":{"time":5, "min_age":120,"max_age": 140}}
+  }
+}
