@@ -8,16 +8,16 @@
 # nombre
 #SBATCH -J sm4_simul_sim008
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
-#SBATCH --time=120:00:00
+#SBATCH --time=1:00:00
 # archivos de salida y de error
-#SBATCH -o sm4_simul_sim008-array_%A_%a.o
-#SBATCH -e sm4_simul_sim008-array_%A_%a.e
+#SBATCH -o sm4_simul_sim008-test_%A_%a.o
+#SBATCH -e sm4_simul_sim008-test_%A_%a.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo
 #SBATCH --mail-user=angelcristobal.ordonez@uva.es
 #SBATCH --mail-type=ALL
-#SBATCH --array=1-5000
+#SBATCH --array=1-2
 ROOT=/home/uva_iufor_1/COMUNES/simanfor/simulator/simulator
 SCNR=/scratch/uva_iufor_1/uva_iufor_1_3/sim008/scenario/scnr_sp999_${SLURM_ARRAY_TASK_ID}_5-100.json
 # carga de las variables necesarias para usar Python 3.7.7

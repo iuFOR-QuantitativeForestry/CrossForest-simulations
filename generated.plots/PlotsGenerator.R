@@ -46,8 +46,8 @@ library(openxlsx)
 ## rm(list=ls())
 ## ls()
 ## getwd()
-## setwd(data.folder) 
-dir()
+## setwd(data.folder)
+## dir()
 
                                         # plot variables
 
@@ -74,9 +74,9 @@ nms.t.all_en <- c('INVENTORY_ID', 'PLOT_ID', 'TREE_ID', 'number_of_trees', 'spec
 
 ## set initial conditios
 plot.id <- 1 # plot identificator
-f.expan <- tph / n.t # factor de expansión necesario para que el número de árboles por hectárea 'tph' sea el deseado en función del numero de árboles 'n.t' que se van a generar por parcela 
+f.expan <- tph / n.t # factor de expansión necesario para que el número de árboles por hectárea 'tph' sea el deseado en función del numero de árboles 'n.t' que se van a generar por parcela
 plot.area <- 10000/f.expan
-id.inv  <- paste0('simulat.en.', n.p, '.', n.t) 
+id.inv  <- paste0('simulat.en.', n.p, '.', n.t)
 
 ## set plot variables
 parcelaIFN <- rep(NA, n.p)
@@ -168,7 +168,7 @@ Coord_Y <- rep(NA,n.t_x_n.p)
 id <- 0
 for (plot.id in 1:n.p) {
     tree.id <- 1
-    age <- as.integer(age0 + runif(1, -5, 5))    
+    age <- as.integer(age0 + runif(1, -5, 5))
     parcelaIFN[plot.id] <-  'simulation'
     superficiePARCELA[plot.id] <- plot.area
     expan[plot.id] <- f.expan
@@ -209,18 +209,18 @@ for (plot.id in 1:n.p) {
 	ARBOL[id] <- tree.id
 	NUMEROINDIVIDUOS[id] <- 1
 	ESPECIE[id] <- sp
-	DIAMETRO_1[id] <- dbh.m + var.d * runif(1, -1, 1) 
-	DIAMETRO_2[id] <- dbh.m + var.d * runif(1, -1, 1) 
+	DIAMETRO_1[id] <- dbh.m + var.d * runif(1, -1, 1)
+	DIAMETRO_2[id] <- dbh.m + var.d * runif(1, -1, 1)
 	CALIDAD[id] <- 0
 	FORMA[id] <- 0
-	ALTURA[id] <- ht.m + var.h * runif(1, -1, 1) 
+	ALTURA[id] <- ht.m + var.h * runif(1, -1, 1)
 	PARAMESP[id] <- 0
         OBSERVACIONES[id] <- ""
         DAP[id] <- (DIAMETRO_1[id]+DIAMETRO_2[id])/2
 	CORTEZA_1[id] <- 0
 	CORTEZA_2[id] <- 0
 	CORTEZA[id] <- 0
-	CIRCUNFERENCIA[id] <- pi * DAP[id] 
+	CIRCUNFERENCIA[id] <- pi * DAP[id]
 	EXPAN[id] <- f.expan
 	ESBELTEZ[id] <- DAP[id] / ALTURA[id]
 	SEC_NORMAL[id] <- pi * (DAP[id] / 200) ^ 2
@@ -256,44 +256,44 @@ for (plot.id in 1:n.p) {
         }
     }
 
-trees <- data.frame(ID_INVENTARIOt,##[1] "INVENTORY_ID"         
-                   ID_PARCELAt,##"PLOT_ID"              
-                   ARBOL,##"TREE_ID"             
-                   NUMEROINDIVIDUOS,##[4] "number_of_trees"      
+trees <- data.frame(ID_INVENTARIOt,##[1] "INVENTORY_ID"
+                   ID_PARCELAt,##"PLOT_ID"
+                   ARBOL,##"TREE_ID"
+                   NUMEROINDIVIDUOS,##[4] "number_of_trees"
                    ESPECIE,##"specie"
-                   CALIDAD,##"quality"             
-                   FORMA,## [7] "shape"                                    
+                   CALIDAD,##"quality"
+                   FORMA,## [7] "shape"
                    PARAMESP,## "special_param"
                    OBSERVACIONES,##"remarks"
-                   EDAD130,##[10] "age_130"             
-                   CLASE_SOCIOLOGICA,## "social_class" 
-                   EDAD_BASE,## "tree_age"            
-                   Coord_X,##[13] "coord_x"             
-                   Coord_Y,## "coord_y"              
-                   EXPAN,##"expan"               
-                   DIAMETRO_1,##[16] "dbh_1"  
+                   EDAD130,##[10] "age_130"
+                   CLASE_SOCIOLOGICA,## "social_class"
+                   EDAD_BASE,## "tree_age"
+                   Coord_X,##[13] "coord_x"
+                   Coord_Y,## "coord_y"
+                   EXPAN,##"expan"
+                   DIAMETRO_1,##[16] "dbh_1"
                    DIAMETRO_2,##"dbh_2"
-                   DAP,## "dbh"                 
-                   ALTURA_TOC,##[19] "stump_h"              "height"               "bark_1"              
+                   DAP,## "dbh"
+                   ALTURA_TOC,##[19] "stump_h"              "height"               "bark_1"
                    ALTURA,
                    CORTEZA_1,
                    CORTEZA_2,##[22] "bark_2"               "bark"                 "normal_circumference"
                    CORTEZA,
                    CIRCUNFERENCIA,
-                   ESBELTEZ,##[25] "hd_ratio"             "basal_area"           "bal"                 
+                   ESBELTEZ,##[25] "hd_ratio"             "basal_area"           "bal"
                    SEC_NORMAL,
                    BAL,
-                   ba_ha, ## [28] "ba_ha"                                  
+                   ba_ha, ## [28] "ba_ha"
                    CR, ## "cr"
                    LCW, ## "lcw"
-                   ALTURA_BC,##[31] "hcb"                  "hlcw"                 "vol"                 
+                   ALTURA_BC,##[31] "hcb"                  "hlcw"                 "vol"
                    ALTURA_MAC,
                    vcc,
                    vsc,##[34] "bole_vol"
-                   ## "bark_vol"            
+                   ## "bark_vol"
                    VLE## "firewood_vol"
-                   ## [37] "vol_ha"               "dbh_oc"               "h_uncork"            
-                   ## [40] "nb"                   "cork_cycle"          
+                   ## [37] "vol_ha"               "dbh_oc"               "h_uncork"
+                   ## [40] "nb"                   "cork_cycle"
                    ## IAVC,
                    ## SECCION_COPA_MAXIMA,
                    ## DIAMETRO_MIN,
@@ -309,17 +309,17 @@ trees <- data.frame(ID_INVENTARIOt,##[1] "INVENTORY_ID"
                    ## RADIO_C_4
                    )
 
-plots <- data.frame(ID_INVENTARIOp, ## "INVENTORY_ID"     
-                   ID_PARCELAp, ## "PLOT_ID"  
+plots <- data.frame(ID_INVENTARIOp, ## "INVENTORY_ID"
+                   ID_PARCELAp, ## "PLOT_ID"
                    ## "MODEL_NAME"
                    parcelaIFN, ## "PLOT_TYPE"
-                   superficiePARCELA, ## "PLOT_AREA"                    
+                   superficiePARCELA, ## "PLOT_AREA"
                    provincia, ## "PROVINCE"
-                   ZonaEstudio, ##  "STUDY_AREA" 
-                   Municipio, ## "MUNICIPALITY"    
-                   Monte, ## "FOREST" 
-                   ## "PROV_REGION" 
-                   EspeciePrincipal, ## "MAIN_SPECIE" 
+                   ZonaEstudio, ##  "STUDY_AREA"
+                   Municipio, ## "MUNICIPALITY"
+                   Monte, ## "FOREST"
+                   ## "PROV_REGION"
+                   EspeciePrincipal, ## "MAIN_SPECIE"
                    ## "SPECIE_IFN_ID"
                    ## "SLOPE"
                    ## "ASPECT"
@@ -329,7 +329,7 @@ plots <- data.frame(ID_INVENTARIOp, ## "INVENTORY_ID"
                    Altitud, # "ALTITUDE"
                    expan, # "EXPAN"
                    EDAD, # "AGE"
-                   ## N_PIES, 
+                   ## N_PIES,
                    N_PIESHA, # "DENSITY"
                    A_BASIMETRICA, # "BASAL_AREA"
                    ## "BA_MAX"
@@ -349,14 +349,14 @@ plots <- data.frame(ID_INVENTARIOp, ## "INVENTORY_ID"
                    DG_COPA,## "CROWN_DOM_D"
                    FCC, ## "CANOPY_COVER"
                    I_REINEKE, ## "REINEKE"
-                   I_HART, ## "HART"            
+                   I_HART, ## "HART"
                    SI, ## "SI"
                    ## "REF_SI_AGE"
                    ## "QI"
                    ## "VOL"
                    VSC, ## "BOLE_VOL"
                    VCC ## "BARK_VOL"
-                   ## "VOL_HA"          
+                   ## "VOL_HA"
                    )
 
 nms.p <- names(plots)
@@ -401,7 +401,7 @@ dominantHeight<-function(x, plotID="Estadillo") {
   o <-order(d, decreasing=TRUE)
   h = h[o]
   n = n[o]
-  ncum = 0 
+  ncum = 0
   for(i in 1:length(h)) {
     ncum = ncum + n[i]
     if(ncum>100) return(sum(h[1:i]*n[1:i], na.rm=TRUE)/sum(h[1:i]*n[1:i]/h[1:i], na.rm=TRUE))
@@ -417,7 +417,7 @@ plots$D_MEDIO <- means$D_MEDIO
 plots$A_BASIMETRICA <- means$A_BASIMETRICA
 plots$H_MEDIA <- means$H_MEDIA
 plots$D_CUADRATICO <- means$D_CUADRATICO
-    
+
 #n.p
 #n.t
 n.trees <- paste0('trees_', id.file, '.', n.p, '.', n.t ,'.csv')
