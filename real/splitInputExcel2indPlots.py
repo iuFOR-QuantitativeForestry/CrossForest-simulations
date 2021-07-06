@@ -25,11 +25,11 @@ else:
             file_type = 'xlsx'
         else:
             scratch_folder = '/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/'
-            file_name = 'mix.xlsx'
+            file_name = 'Mix.xlsx'
             file_type = 'xlsx'
 
 ## Directorio de trabajo
-Path=scratch_folder+'input/' # '/scratch/uva_iufor_1/uva_iufor_1_3/'
+Path=scratch_folder # '/scratch/uva_iufor_1/uva_iufor_1_3/'
 print(Path)
 
 ## step 001 Read input excel to dataframe "plot" and "tree"
@@ -51,7 +51,7 @@ for plot_name in plotlist:
     tree_i=tree[(tree.PLOT_ID==plot_name)]
     # plot_=plot.query('PLOT_ID==plot_name')
     # tree_=tree.query('PLOT_ID==plot_name')
-    fileoutpath = Path+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.xlsx', 1)
+    fileoutpath = Path+'/input/'+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.xlsx', 1)
     writer=pd.ExcelWriter(fileoutpath)
     plot_i.to_excel(writer, sheet_name='Parcelas', startcol=0, index=False)
     tree_i.to_excel(writer, sheet_name='PiesMayores', startcol=0, index=False)

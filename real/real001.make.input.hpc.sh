@@ -6,36 +6,58 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J RScrpt.Plot.Generator.sim003
+#SBATCH -J Script.make.scenarios.real001
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
-#SBATCH --time=01:00:00
+#SBATCH --time=10:00:00
 # archivos de salida y de error
-#SBATCH -o RScrpt.Plot.Generator.sim003-%j.o
-#SBATCH -e RScrpt.Plot.Generator.sim003-%j.e
+#SBATCH -o Script.make.scenarios.real001-%j.o
+#SBATCH -e Script.make.scenarios.real001-%j.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo
 #SBATCH --mail-user=angelcristobal.ordonez@uva.es
 #SBATCH --mail-type=ALL
-SCR_Dir=~/scripts
-OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/sim003/input
-# argument passed to the script is the number of files you want to be created ($1), and the number of plot by file ($2), and the number of trees per plot ($3) ...
-if [ $# -eq 3 ]; then       nt=$3; np=$2; nf=$1
-  elif [ $# -eq 2 ]; then   nt=100; np=$2; nf=$1
-    elif [ $# -eq 1 ]; then nt=100; np=20;  nf=$1 
-      else                  nt=100; np=100;  nf=4
-fi
-echo $nf "files will be created"
-echo $np "plots per files"
-echo $nt "trees per plot"
-# carga de las variables necesarias para usar R
-module load /soft/calendula2/modulefiles/haswell/R_3.6.3
+
+ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/scripts
+OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/real/real001
+
 CurrentDir=$(pwd)
 cd $OUT_Dir
-# ejecution of R script to build excel input files
+
+cd $OUT_Dir
+
+## create a list with the input files
+## https://unix.stackexchange.com/questions/356385/loop-through-a-folder-and-list-files
+## searchDir="*"
+cd ./input/
+inputlist=()
+while IFS= read -r -d $'\0' foundFile; do
+    inputlist+=("$foundFile")
+done < <(find * -maxdepth 1 -type f -print0 2> /dev/null)
+cd ..
+
+## build scenario files for each itinerario
+scenario=_E1
+
+echo ${OUT_Dir}/scenario > ./templates/scenarios.filenames${scenario}
+
 i=1
-while [ $i -le $nf ]; do
-    $SCR_Dir/PlotsGenerator.R id.file=$i sp=999 n.p=$np n.t=$nt age0=25 ht.m=12 dbh.m=11 tph=1111 var.d=4 var.h=2
-    ((i++))
-done
+if [[ ${#inputlist[@]} -ne 0 ]]; then  ## checking for non empty list
+    for inputfilename in "${inputlist[@]}"; do ## proccess every file in a for loop
+	## https://www.baeldung.com/linux/bash-substring
+	## echo ${inputfilename}
+	species=${inputfilename:13:8}
+	echo ${species}
+	## https://stackoverflow.com/questions/12152626/how-can-i-remove-the-extension-of-a-filename-in-a-shell-script
+	##         name=$(echo "$filename" | cut -f 1 -d '.')
+	filename=$(echo "${inputfilename%.*}")
+	echo ${filename}
+	scenariofilename=scnr_mix${scenario}_${i}_.json
+	echo ${scenariofilename}
+	sed -e "s/_idfile_/${filename}/g" ./templates/${species}${scenario}.json > ./scenario/${scenariofilename}
+	echo $scenariofilename >> ./templates/scenarios.filenames${scenario}
+	((i++))
+    done
+fi
+
 cd $CurrentDir

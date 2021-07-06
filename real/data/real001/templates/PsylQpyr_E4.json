@@ -1,7 +1,7 @@
 {
   "name": "CROSSFOREST - Psylvestris + Qpyrenaica E4, wood production with low fire risk",
   "overwrite_output_file": true,
-  "output_path": "../../output/PsylQpyr_E4__",
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/output/E4__idfile_",
   "decimal_numbers": 2,
   "zip_compression": false,
   "operations": [
@@ -14,7 +14,7 @@
       "variables": {
         "init": 5,
         "time": 0,
-        "input": "../../data/Mix_models_1/Mix8_PsylQpyr_DR.xlsx"
+        "input": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/input/_idfile_.xlsx"
       }
     },
     {"name": "Inicio", "description": "Inicialización de datos", "model_path": "models.trees.Mix8_PsylQpyr", "model_class": "PsylvestrisQpyrenaicaMix", "operation": "INIT", "variables": { "time": 0}},

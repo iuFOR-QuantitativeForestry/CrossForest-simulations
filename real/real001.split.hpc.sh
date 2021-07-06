@@ -22,6 +22,7 @@
 module load python_3.7.7
 
 ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/scripts
+OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/real001
 
 CurrentDir=$(pwd)
 cd $OUT_Dir
