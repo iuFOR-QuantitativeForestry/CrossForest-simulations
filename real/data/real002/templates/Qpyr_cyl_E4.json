@@ -1,0 +1,289 @@
+{
+  "name": "CROSSFOREST - Qpyrenaica E4 Wood Production",
+  "overwrite_output_file": true,
+  "output_path": "../../output/Qpyr_cyl_E4__",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 0,
+        "time": 0,
+        "input": {
+          "plots": "../../data/Qpyrenaica/plots_IFN_s43_cyl.csv",
+          "trees": "../../data/Qpyrenaica/trees_IFN_s43_cyl.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 6
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 16
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 29,
+        "max_age": 26
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 26
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 36
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 42,
+        "max_age": 46
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 46
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 56
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 36,
+        "max_age": 66
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 66
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 76
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 40,
+        "max_age": 86
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 86
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 96
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 36,
+        "max_age": 106
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 106
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 116
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 50,
+        "max_age": 126
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 126
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 136
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 146
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 100
+      }
+    }
+  ]
+}

@@ -1,0 +1,1267 @@
+{
+  "name": "CROSSFOREST - Qrobur Galicia E3",
+  "overwrite_output_file": true,
+  "output_path": "../../output/Qrob_gal_E3__",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 0,
+        "time": 0,
+        "input": {
+          "plots": "../../data/Qrobur/plots_IFN_s41_gal.csv",
+          "trees": "../../data/Qrobur/trees_IFN_s41_gal.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand",   
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+    {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 0",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 1
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 1",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 2
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 2",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 3
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 3",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 4
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 4",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 5
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 5",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 6
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 6",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 7
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 7",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 8
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 8",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 9
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 9",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 10
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 10",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 11
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 11",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 12
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 12",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 13
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 13",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 14
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 14",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 15
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 15",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 16
+     }
+     },
+     {
+      "name": "Harvest",
+      "description": "CLARA 1 - 15 ANOS",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "max_age":16,
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 40
+      }
+      },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 17",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 17
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 18",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 18
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 19",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 19
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 20",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 20
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 21",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 21
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 22",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 22
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 23",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 23
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 24",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 24
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 25",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 25
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 26",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 26
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 27",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 27
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 28",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 28
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 29",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 29
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 30
+     }
+     },
+     {
+      "name": "Harvest",
+      "description": "CLARA 2 - 30 ANOS",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "max_age":31,
+        "cut_down": "VOLUME",
+        "volumen": 20
+      }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 31",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 31
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 32",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 32
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 33",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 33
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 34",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 34
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 35",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 35
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 36",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 36
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 37",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 37
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 38",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 38
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 39",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 39
+     }
+     },
+      {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 40",
+      "model_path": "models.stand.Qrobur_stand__gal__v01", 
+      "model_class": "QuercusRoburGaliciaStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 40
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 41",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+        "max_age": 41
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 42",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 42
+
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 43",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 43
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 44",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 44
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 45",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 45
+     }
+     },
+    {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 46",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 46
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 47",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 47
+     }
+     },
+     {
+        "name": "Harvest",
+        "description": "CLARA 1 - 47 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":48,
+          "cut_down": "AREA",
+          "volumen": 20
+        }
+    },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 48",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 48
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 49",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 49
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 50",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 50
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 51",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 51
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 52",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 52
+     }
+     },
+     {
+        "name": "Harvest",
+        "description": "CLARA 2 - 52 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":53,
+          "cut_down": "VOLUME",
+          "volumen": 10
+        }
+      },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 53",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 53
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 54",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 54
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 55",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 55
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 56",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 56
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 57",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 57
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 58",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 58
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 59",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 59
+     }
+     },
+     {
+        "name": "Harvest",
+        "description": "CLARA 3 - 59 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":60,
+          "cut_down": "AREA",
+          "volumen": 15
+        }
+      },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 60",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",
+      "model_class": "QuercusRoburGaliciaStand", 
+      "operation": "EXECUTION",
+      "variables": {
+      "time": 1,
+      "max_age": 60
+     }
+     },
+     {
+      "name": "Simulacion 1 Qr",
+      "description": "Simulación año 61",
+      "model_path": "models.stand.Qrobur_stand__gal__v01",  
+      "model_class": "QuercusRoburGaliciaStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 61
+       }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 62",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 62
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 63",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+           "time": 1,
+           "max_age": 63
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 64",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 64
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 65",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 65
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 66",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 66
+      }
+     },
+     {
+        "name": "Harvest",
+        "description": "CLARA 4 - 66 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":67,
+          "cut_down": "PERCENTOFTREES",
+          "volumen": 25
+        }
+      },
+          {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 67",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 67
+      }
+     },
+        {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 68",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+         "time": 1,
+         "max_age": 68
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 69",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+          "max_age": 69
+      }
+     },
+     {
+       "name": "Simulacion 1 Qr",
+       "description": "Simulación año 70",
+       "model_path": "models.stand.Qrobur_stand__gal__v01",  
+       "model_class": "QuercusRoburGaliciaStand",  
+       "operation": "EXECUTION",
+       "variables": {
+          "time": 1,
+         "max_age": 70
+      }
+     },
+      {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 71",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+          "time": 1,
+          "max_age": 71
+       }
+       },
+          {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 72",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+           "time": 1,
+          "max_age": 72
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 73",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+           "time": 1,
+           "max_age": 73
+  
+       }
+       },
+       {
+        "name": "Harvest",
+        "description": "CLARA 5 - 73 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":74,
+          "cut_down": "AREA",
+          "volumen": 10
+        }
+      },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 74",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+           "time": 1,
+           "max_age": 74
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 75",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+           "time": 1,
+           "max_age": 75
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 76",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+           "time": 1,
+           "max_age": 76
+       }
+       },
+        {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 77",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 77
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 78",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 78
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 79",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 79
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 80",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 80
+       }
+       },
+       {
+        "name": "Harvest",
+        "description": "CLARA 6 - 80 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":81,
+          "cut_down": "PERCENTOFTREES",
+          "volumen": 15
+        }
+      },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 81",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 81
+       }
+       },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 82",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 82
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 83",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 83
+       }
+       },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 84",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 84
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 85",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 85
+       }
+       },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 86",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 86
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 87",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 87
+       }
+       },
+       {
+        "name": "Harvest",
+        "description": "CLARA 7 - 87 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":88,
+          "cut_down": "VOLUME",
+          "volumen": 20
+        }
+      },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 88",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 88
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 89",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 89
+       }
+       },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 90",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 90
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 91",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 91
+       }
+       },
+         {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 92",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 92
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 93",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 93
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 94",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 94
+       }
+       },
+       {
+        "name": "Harvest",
+        "description": "CLARA 8 - 94 ANOS",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age":95,
+          "cut_down": "PERCENTOFTREES",
+          "volumen": 10
+        }
+      },
+      {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 95",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 95
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 96",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 96
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 97",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 97
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 98",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 98
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 99",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 99
+       }
+       },
+       {
+        "name": "Simulacion 1 Qr",
+        "description": "Simulación año 100",
+        "model_path": "models.stand.Qrobur_stand__gal__v01",
+        "model_class": "QuercusRoburGaliciaStand", 
+        "operation": "EXECUTION",
+        "variables": {
+        "time": 1,
+        "max_age": 100
+        }
+    }
+  ]
+}
+

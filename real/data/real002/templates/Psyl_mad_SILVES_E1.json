@@ -1,0 +1,133 @@
+{
+  "name": "CROSSFOREST - Psylvestris E1 SILVES",
+  "overwrite_output_file": true,
+  "output_path": "../../output/Psyl_mad_E1_SILVES__",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 5,
+        "time": 0,
+        "input": {
+          "plots": "../../data/Psylvestris/plots_IFN_s21_mad.csv",
+          "trees": "../../data/Psylvestris/trees_IFN_s21_mad.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+ 	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 3
+      }
+    }, 
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 13
+      }
+    },
+  {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+    "max_age": 23
+      }
+    },    
+   {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+    "max_age": 33
+      }
+    },    
+	    {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 43
+      }
+    },
+	    {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 53
+      }
+    },   
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 63
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 73
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__mad__v01",
+      "model_class": "PinusSylvestrisMadridStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 83
+      }
+    }
+  ]
+}
