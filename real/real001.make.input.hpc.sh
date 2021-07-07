@@ -18,6 +18,13 @@
 #SBATCH --mail-user=angelcristobal.ordonez@uva.es
 #SBATCH --mail-type=ALL
 
+## argument passed to the script is the scenario type number ($1)
+
+if [ $# -eq 1 ]; then scenario=$1 
+      else scenario=_E1
+fi
+
+
 ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/scripts
 OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/real/real001
 
@@ -37,7 +44,6 @@ done < <(find * -maxdepth 1 -type f -print0 2> /dev/null)
 cd ..
 
 ## build scenario files for each itinerario
-scenario=_E1
 
 echo ${OUT_Dir}/scenario > ./templates/scenarios.filenames${scenario}
 
@@ -47,13 +53,13 @@ if [[ ${#inputlist[@]} -ne 0 ]]; then  ## checking for non empty list
 	## https://www.baeldung.com/linux/bash-substring
 	## echo ${inputfilename}
 	species=${inputfilename:13:8}
-	echo ${species}
+	## echo ${species}
 	## https://stackoverflow.com/questions/12152626/how-can-i-remove-the-extension-of-a-filename-in-a-shell-script
 	##         name=$(echo "$filename" | cut -f 1 -d '.')
 	filename=$(echo "${inputfilename%.*}")
-	echo ${filename}
+	## echo ${filename}
 	scenariofilename=scnr_mix${scenario}_${i}_.json
-	echo ${scenariofilename}
+	## echo ${scenariofilename}
 	sed -e "s/_idfile_/${filename}/g" ./templates/${species}${scenario}.json > ./scenario/${scenariofilename}
 	echo $scenariofilename >> ./templates/scenarios.filenames${scenario}
 	((i++))

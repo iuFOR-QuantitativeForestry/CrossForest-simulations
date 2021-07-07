@@ -6,28 +6,26 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J Python.Plot.split.real001
+#SBATCH -J sm4_simul_mix_real001-from1to1780
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
-#SBATCH --time=10:00:00
+#SBATCH --time=120:00:00
 # archivos de salida y de error
-#SBATCH -o Python.Plot.split.real001-%j.o
-#SBATCH -e Python.Plot.split.real001-%j.e
+#SBATCH -o sm4_simul_mix_real001-from1to1780_%A_%a.o
+#SBATCH -e sm4_simul_mix_real001-from1to1780_%A_%a.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo
 #SBATCH --mail-user=angelcristobal.ordonez@uva.es
 #SBATCH --mail-type=ALL
+#SBATCH --array=1-1780
 
+if [ $# -eq 1 ]; then scenario=$1 
+      else scenario=_E1
+fi
+
+ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/simulator
+SCNR=/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/scenario/scnr_mix${scenario}_${SLURM_ARRAY_TASK_ID}_.json
 # carga de las variables necesarias para usar Python 3.7.7
 module load python_3.7.7
-
-ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/scripts
-OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/real001
-
-CurrentDir=$(pwd)
-cd $OUT_Dir
-# ejecution of Python script to split excel file into individual files
-
-python $ROOT/splitInputExcel2indPlots.py /scratch/uva_iufor_1/uva_iufor_1_3/real/real001/ Mix.xlsx xlsx
-
-cd $CurrentDir
+# ejecution of simulator
+python $ROOT/src/main.py -s $SCNR -logging_config_file $ROOT/config_files/logging.conf

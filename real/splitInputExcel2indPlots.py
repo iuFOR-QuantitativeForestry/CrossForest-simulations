@@ -25,7 +25,7 @@ else:
             file_type = 'xlsx'
         else:
             scratch_folder = '/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/'
-            file_name = 'Mix.xlsx'
+            file_name = 'mix.xlsx'
             file_type = 'xlsx'
 
 ## Directorio de trabajo
