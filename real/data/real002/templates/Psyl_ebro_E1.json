@@ -1,7 +1,7 @@
 {
   "name": "CROSSFOREST - Psylvestris E1",
   "overwrite_output_file": true,
-  "output_path": "../../output/Psyl_ebro_E1__",
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/output/E1__idfile_",
   "decimal_numbers": 2,
   "zip_compression": false,
   "operations": [
@@ -15,8 +15,8 @@
         "init": 5,
         "time": 0,
         "input": {
-          "plots": "../../data/Psylvestris/plots_IFN_s21_ebro.csv",
-          "trees": "../../data/Psylvestris/trees_IFN_s21_ebro.csv"
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/plot__idfile_.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/tree__idfile_.csv"
         }
       }
     },
@@ -40,7 +40,7 @@
         "time": 5,
 		"max_age": 3
       }
-    }, 
+    },
 	{
       "name": "Simulacion 5",
       "description": "Simulación durante 5 años",
@@ -51,7 +51,7 @@
         "time": 5,
 		"max_age": 8
       }
-    }, 
+    },
 	{
       "name": "Simulacion 5",
       "description": "Simulación durante 5 años",
@@ -84,7 +84,7 @@
         "time": 5,
     "max_age": 23
       }
-    },    
+    },
 	 {
       "name": "Simulacion 5",
       "description": "Simulación durante 5 años",
@@ -106,7 +106,7 @@
         "time": 5,
     "max_age": 33
       }
-    },    
+    },
     {
       "name": "Simulacion 5",
       "description": "Simulación durante 5 años",
@@ -161,7 +161,7 @@
         "time": 5,
     "max_age": 58
       }
-    },    
+    },
 	{
       "name": "Simulacion 5",
       "description": "Simulación durante 5 años",

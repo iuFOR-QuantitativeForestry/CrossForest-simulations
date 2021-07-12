@@ -24,19 +24,29 @@ else:
             file_name = 'Mix.xlsx'
             file_type = 'xlsx'
         else:
-            scratch_folder = '/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/'
-            file_name = 'mix.xlsx'
-            file_type = 'xlsx'
+            scratch_folder = 'real002'
+            file_name = '_pure_IFN.csv'
+            file_type = 'csv'
+            ## file_type = 'xlsx'
 
 ## Directorio de trabajo
-Path=scratch_folder # '/scratch/uva_iufor_1/uva_iufor_1_3/'
+Path='/scratch/uva_iufor_1/uva_iufor_1_3/real/'+scratch_folder+'/' # '/scratch/uva_iufor_1/uva_iufor_1_3/'
 print(Path)
 
 ## step 001 Read input excel to dataframe "plot" and "tree"
-fileinpath = Path+'source/'+file_name
-plot = pd.read_excel(fileinpath, 0)
-tree = pd.read_excel(fileinpath, 1)
-print(fileinpath)
+if file_type == 'xlsx':
+    fileinpath = Path+'source/'+file_name
+    plot = pd.read_excel(fileinpath, 0)
+    tree = pd.read_excel(fileinpath, 1)
+    print('fileinpath: ', fileinpath)
+else:
+    if file_type =='csv':
+        fileplotinpath = Path+'source/plots'+file_name
+        print('fileplotinpath: ',fileplotinpath)
+        plot = pd.read_csv(fileplotinpath)
+        filetreeinpath = Path+'source/trees'+file_name
+        tree = pd.read_csv(filetreeinpath)
+
 
 ## step 002 Read list of plots to vector "plotlist"
 plotlist=plot['PLOT_ID'].values.tolist()
@@ -51,8 +61,16 @@ for plot_name in plotlist:
     tree_i=tree[(tree.PLOT_ID==plot_name)]
     # plot_=plot.query('PLOT_ID==plot_name')
     # tree_=tree.query('PLOT_ID==plot_name')
-    fileoutpath = Path+'/input/'+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.xlsx', 1)
-    writer=pd.ExcelWriter(fileoutpath)
-    plot_i.to_excel(writer, sheet_name='Parcelas', startcol=0, index=False)
-    tree_i.to_excel(writer, sheet_name='PiesMayores', startcol=0, index=False)
-    writer.save()
+    if file_type=='xlsx':
+        fileoutpath = Path+'/input/'+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.xlsx', 1)
+        writer=pd.ExcelWriter(fileoutpath)
+        plot_i.to_excel(writer, sheet_name='Parcelas', startcol=0, index=False)
+        tree_i.to_excel(writer, sheet_name='PiesMayores', startcol=0, index=False)
+        writer.save()
+    else:
+        if file_type=='csv':
+            fileplotoutpath = Path+'/input/plot'+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.csv', 1)          
+            plot_i.to_csv(fileplotoutpath)
+            filetreeoutpath = Path+'/input/tree'+file_name.replace(file_type, 'sps_'+model_+'.P_'+str(i)+'.csv', 1)
+            tree_i.to_csv(filetreeoutpath)
+
