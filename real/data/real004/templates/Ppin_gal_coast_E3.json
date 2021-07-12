@@ -1,7 +1,7 @@
 {
   "name": "CROSSFOREST - Ppinaster Galicia coast E3",
   "overwrite_output_file": true,
-  "output_path": "../../output/Ppin_gal_coast_E3__",
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/output/E3__idfile_",
   "decimal_numbers": 2,
   "zip_compression": false,
   "operations": [
@@ -15,8 +15,8 @@
         "init": 5,
         "time": 0,
         "input": {
-          "plots": "../../data/Ppinaster/plots_IFN_s26_gal.csv",
-          "trees": "../../data/Ppinaster/trees_IFN_s26_gal.csv"
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/input/plot__idfile_.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/input/tree__idfile_.csv"
         }
       }
     },

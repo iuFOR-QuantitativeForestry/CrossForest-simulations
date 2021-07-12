@@ -1,7 +1,7 @@
 {
-  "name": "CROSSFOREST - Ppinaster Galicia inland E5",
+  "name": "CROSSFOREST - Ppinaster Galicia inland E1",
   "overwrite_output_file": true,
-  "output_path": "../../output/Ppin_gal_inland_E5__",
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/output/E1__idfile_",
   "decimal_numbers": 2,
   "zip_compression": false,
   "operations": [
@@ -15,8 +15,8 @@
         "init": 5,
         "time": 0,
         "input": {
-          "plots": "../../data/Ppinaster/plots_IFN_s26_gal.csv",
-          "trees": "../../data/Ppinaster/trees_IFN_s26_gal.csv"
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/input/plot__idfile_.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/input/tree__idfile_.csv"
         }
       }
     },
@@ -129,7 +129,7 @@
          "max_age": 9
      }
     },
-     {
+    {
       "name": "Simulacion 1",
       "description": "Simulación año 9",
       "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
@@ -152,17 +152,15 @@
      }
     },
     {
-      "name": "Harvest",
-      "description": "CLAREO 1 - 10 ANOS",
-      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
-      "model_class": "PinusPinasterGaliciaInlandStand",
-      "operation": "HARVEST",
+      "name": "Simulacion 1",
+      "description": "Simulación año 11",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
       "variables": {
-        "time": 0,
-        "max_age": 12,        
-        "cut_down": "PERCENTOFTREES",
-        "volumen": 20
-      }
+         "time": 1,
+         "max_age": 12
+     }
     },
     {
       "name": "Simulacion 1",
@@ -172,7 +170,7 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 12
+          "max_age": 13
      }
     },
     {
@@ -183,7 +181,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 13
+         "max_age": 14
      }
     },
     {
@@ -194,7 +192,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 14
+         "max_age": 15
      }
     },
     {
@@ -205,10 +203,10 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 15
+          "max_age": 16
      }
     },
-      {
+    {
       "name": "Simulacion 1",
       "description": "Simulación año 16",
       "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
@@ -216,7 +214,7 @@
       "operation": "EXECUTION",
       "variables": {
         "time": 1,
-        "max_age": 16
+        "max_age": 17
      }
     },
     {
@@ -227,7 +225,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 17
+         "max_age": 18
       }
     },
     {
@@ -238,7 +236,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 18
+         "max_age": 19
       }
     },
     {
@@ -249,7 +247,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 19
+         "max_age": 20
       }
     },
     {
@@ -260,23 +258,10 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 20
+         "max_age": 21
       }
     },
-    {
-      "name": "Harvest",
-      "description": "CLARA 1 - 20 ANOS - POR BAIXO",
-      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
-      "model_class": "PinusPinasterGaliciaInlandStand",
-      "operation": "HARVEST",
-      "variables": {
-        "time": 0,
-        "max_age": 21,        
-        "cut_down": "PERCENTOFTREES",
-        "volumen": 50
-      }
-    },
-    {
+      {
       "name": "Simulacion 1",
       "description": "Simulación año 21",
       "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
@@ -284,7 +269,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 21
+         "max_age": 22
       }
     },
     {
@@ -295,7 +280,7 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 22
+          "max_age": 23
       }
     },
     {
@@ -306,7 +291,7 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 23
+          "max_age": 24
       }
     },
     {
@@ -317,7 +302,7 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 24
+          "max_age": 25
       }
     },
     {
@@ -328,36 +313,12 @@
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 25
+          "max_age": 26
     }
       },
       {
-        "name": "Harvest",
-        "description": "CLARA 2 - 25 ANOS - POR BAIXO",
-        "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
-        "model_class": "PinusPinasterGaliciaInlandStand",
-        "operation": "HARVEST",
-        "variables": {
-          "time": 0,
-          "max_age": 26,        
-          "cut_down": "PERCENTOFTREES",
-          "volumen": 20
-        }
-      },
-     {
       "name": "Simulacion 2",
       "description": "Simulación año 26",
-      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
-      "model_class": "PinusPinasterGaliciaInlandStand",  
-      "operation": "EXECUTION",
-      "variables": {
-         "time": 1,
-         "max_age": 26
-      }
-    },
-    {
-      "name": "Simulacion 1",
-      "description": "Simulación año 27",
       "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
       "model_class": "PinusPinasterGaliciaInlandStand",  
       "operation": "EXECUTION",
@@ -368,13 +329,24 @@
     },
     {
       "name": "Simulacion 1",
+      "description": "Simulación año 27",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 28
+      }
+    },
+    {
+      "name": "Simulacion 1",
       "description": "Simulación año 28",
       "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
       "model_class": "PinusPinasterGaliciaInlandStand",  
       "operation": "EXECUTION",
       "variables": {
           "time": 1,
-          "max_age": 28
+          "max_age": 29
       }
     },
     {
@@ -385,7 +357,7 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 29
+         "max_age": 30
       }
     },
     {
@@ -396,7 +368,51 @@
       "operation": "EXECUTION",
       "variables": {
          "time": 1,
-         "max_age": 30         
+         "max_age": 31   
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 32            
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 33   
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 34   
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 35    
       }
     }
   ]
