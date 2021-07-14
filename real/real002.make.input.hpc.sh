@@ -55,7 +55,7 @@ if [[ ${#inputlist[@]} -ne 0 ]]; then  ## checking for non empty list
 	filename=$(echo "${inputfilename%.*}") ## removes the extension of the file
 	filename=${filename#?????} ## REMOVES plot_ at the begining of the name
 	echo ${filename}
-	scenariofilename=scnr_pure_cat${scenario}_${i}_.json
+	scenariofilename=scnr_pure${scenario}_${i}_.json
 	## echo ${scenariofilename}
 	sed -e "s/_idfile_/${filename}/g" ./templates/${species}${scenario}.json > ./scenario/${scenariofilename}
 	echo $scenariofilename >> ./templates/scenarios.filenames${scenario}
