@@ -6,12 +6,12 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J sm4_simul_pure_real002-from1to5256
+#SBATCH -J sm4_pure_real002-from1to5256
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
 #SBATCH --time=120:00:00
 # archivos de salida y de error
-#SBATCH -o sm4_simul_pure_real002-from1to5256_%A_%a.o
-#SBATCH -e sm4_simul_pure_real002-from1to5256_%A_%a.e
+#SBATCH -o sm4_pure_real002-from1to5256_%A_%a.o
+#SBATCH -e sm4_pure_real002-from1to5256_%A_%a.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo
