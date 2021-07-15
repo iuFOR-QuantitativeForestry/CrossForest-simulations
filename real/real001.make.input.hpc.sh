@@ -19,18 +19,14 @@
 #SBATCH --mail-type=ALL
 
 ## argument passed to the script is the scenario type number ($1)
-
 if [ $# -eq 1 ]; then scenario=$1 
       else scenario=_E1
 fi
-
 
 ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/scripts
 OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_3/real/real001
 
 CurrentDir=$(pwd)
-cd $OUT_Dir
-
 cd $OUT_Dir
 
 ## create a list with the input files
@@ -51,7 +47,7 @@ i=1
 if [[ ${#inputlist[@]} -ne 0 ]]; then  ## checking for non empty list
     for inputfilename in "${inputlist[@]}"; do ## proccess every file in a for loop
 	## https://www.baeldung.com/linux/bash-substring
-	## echo ${inputfilename}
+	echo ${inputfilename}
 	species=${inputfilename:13:8}
 	## echo ${species}
 	## https://stackoverflow.com/questions/12152626/how-can-i-remove-the-extension-of-a-filename-in-a-shell-script

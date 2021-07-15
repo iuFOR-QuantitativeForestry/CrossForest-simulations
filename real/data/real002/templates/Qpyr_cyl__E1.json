@@ -1,0 +1,210 @@
+{
+  "name": "CROSSFOREST - Qpyrenaica E1",
+  "overwrite_output_file": true,
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/output/E1__idfile_",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 0,
+        "time": 0,
+        "input": {
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/plot__idfile_.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/tree__idfile_.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 6
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 16
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 26
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 36
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 46
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 56
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 66
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 76
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 86
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 96
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 106
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 116
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 126
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 136
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 146
+      }
+    },
+    {
+      "name": "Simulacion 10",
+      "description": "Simulación durante 10 años",
+      "model_path": "models.trees.Qpyrenaica__cyl__v01",
+      "model_class": "QuercusPyrenaicaCyL",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+        "max_age": 156
+      }
+    }
+  ]
+}

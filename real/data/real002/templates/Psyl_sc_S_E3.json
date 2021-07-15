@@ -1,0 +1,198 @@
+{
+  "name": "CROSSFOREST - Psylvestris E3 SILVES, wood production medium quality",
+  "overwrite_output_file": true,
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/output/E3__idfile_",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 5,
+        "time": 0,
+        "input": {
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/plot__idfile_.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real002/input/tree__idfile_.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+ 	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 3
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 13
+      }
+    },
+	{
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.harvest.cut_down_systematic",
+      "model_class": "CutDownSystematics",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "AREA",
+        "volumen": 30,
+		"max_age": 23
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 23
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "AREA",
+        "volumen": 27.5,
+		"max_age": 33
+      }
+	},
+    {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 33
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "AREA",
+        "volumen": 27.5,
+		"max_age": 43
+      }
+    },
+	    {
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 43
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "AREA",
+        "volumen": 27.5,
+		"max_age": 53
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 53
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 63
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "Corta",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "cut_down": "AREA",
+        "volumen": 27.5,
+		"max_age": 73
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 73
+      }
+    },
+	{
+      "name": "Simulacion 5",
+      "description": "Simulación durante 5 años",
+      "model_path": "models.stand.Psylvestris_stand__SILVES__si-sc__v01",
+      "model_class": "PinusSylvestrisSISCStand",
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 10,
+		"max_age": 83
+      }
+    }
+  ]
+}
