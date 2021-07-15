@@ -48,8 +48,8 @@ if [[ ${#inputlist[@]} -ne 0 ]]; then  ## checking for non empty list
     for inputfilename in "${inputlist[@]}"; do ## proccess every file in a for loop
 	## https://www.baeldung.com/linux/bash-substring
 	## echo ${inputfilename}
-	species=${inputfilename:18:10}
-	## echo ${species}
+	species=${inputfilename:18:9}
+	## echo ${species}${scenario}
 	## https://stackoverflow.com/questions/12152626/how-can-i-remove-the-extension-of-a-filename-in-a-shell-script
 	## name=$(echo "$filename" | cut -f 1 -d '.')
 	filename=$(echo "${inputfilename%.*}") ## removes the extension of the file
