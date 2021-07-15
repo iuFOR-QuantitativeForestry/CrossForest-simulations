@@ -1,0 +1,415 @@
+{
+  "user": "Leandro Macedo Godoy",
+  "name": "Trituracion- Pinus pinaster Galicia",
+  "overwrite_output_file": true,
+  "output_path": "../../output/inland/Ppinas_29_",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.csv_load",
+      "model_class": "CSVLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 5,
+        "time": 0,
+        "input": {
+          "plots": "../../data/Ppinaster/plots_IFN_s26_gal_inland.csv",
+          "trees": "../../data/Ppinaster/trees_IFN_s26_gal_inland.csv"
+        }
+      }
+    },
+    {
+      "name": "Inicio",
+      "description": "Inicialización de datos",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand",   
+      "operation": "INIT",
+      "variables": {
+        "time": 0
+      }
+    },
+   	    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 0",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 1
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 1",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 2
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 2",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 3
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 3",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 4
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 4",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 5
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 5",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 6
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 6",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 7
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 7",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 8
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 8",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 9
+     }
+    },
+     {
+      "name": "Simulacion 1",
+      "description": "Simulación año 9",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 10
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 10",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 11
+     }
+    },
+    {
+      "name": "Harvest",
+      "description": "CLAREO 1 - 10 ANOS",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "max_age": 12,        
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 20
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 11",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 11
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 12",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01", 
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 12
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 13",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 13
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 14",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 14
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 15",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 15
+     }
+    },
+      {
+      "name": "Simulacion 1",
+      "description": "Simulación año 16",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+        "time": 1,
+        "max_age": 16
+     }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 17",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 17
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 18",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 18
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 19",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 19
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 20",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 20
+      }
+    },
+    {
+      "name": "Harvest",
+      "description": "CLARA 1 - 20 ANOS - POR BAIXO",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand",
+      "operation": "HARVEST",
+      "variables": {
+        "time": 0,
+        "max_age": 20,        
+        "cut_down": "PERCENTOFTREES",
+        "volumen": 30
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 21",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 21
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 22",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 22
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 23",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 23
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 24",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 24
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 25",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 25
+    }
+      },
+      {
+        "name": "Harvest",
+        "description": "CLARA 2 - 25 ANOS - POR BAIXO",
+        "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+        "model_class": "PinusPinasterGaliciaInlandStand",
+        "operation": "HARVEST",
+        "variables": {
+          "time": 0,
+          "max_age": 25,        
+          "cut_down": "PERCENTOFTREES",
+          "volumen": 20
+        }
+      },
+     {
+      "name": "Simulacion 2",
+      "description": "Simulación año 26",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 26
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 27",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 27
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 28",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand",  
+      "operation": "EXECUTION",
+      "variables": {
+          "time": 1,
+          "max_age": 28
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 29",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",  
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 29
+      }
+    },
+    {
+      "name": "Simulacion 1",
+      "description": "Simulación año 30",
+      "model_path": "models.stand.Ppinaster_at_stand__gal_inland__v01",
+      "model_class": "PinusPinasterGaliciaInlandStand", 
+      "operation": "EXECUTION",
+      "variables": {
+         "time": 1,
+         "max_age": 30
+      }
+    }
+  ]
+}
