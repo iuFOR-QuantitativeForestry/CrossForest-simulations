@@ -6,12 +6,12 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J Script.make.scenarios.real001
+#SBATCH -J Script.make.scenarios.real004
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
 #SBATCH --time=1:00:00
 # archivos de salida y de error
-#SBATCH -o Script.make.scenarios.real003-%j.o
-#SBATCH -e Script.make.scenarios.real003-%j.e
+#SBATCH -o Script.make.scenarios.real004-%j.o
+#SBATCH -e Script.make.scenarios.real004-%j.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo

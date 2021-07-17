@@ -6,7 +6,7 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J sm4_simul_pure_gal_real001-from1to898
+#SBATCH -J sm4_simul_pure_gal_real004-from1to898
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
 #SBATCH --time=120:00:00
 # archivos de salida y de error
@@ -24,7 +24,7 @@ if [ $# -eq 1 ]; then scenario=$1
 fi
 
 ROOT=/home/uva_iufor_1/uva_iufor_1_3/simanfor/simulator
-SCNR=/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/scenario/scnr_pure${scenario}_${SLURM_ARRAY_TASK_ID}_.json
+SCNR=/scratch/uva_iufor_1/uva_iufor_1_3/real/real004/scenario/scnr_pure_gal${scenario}_${SLURM_ARRAY_TASK_ID}_.json
 # carga de las variables necesarias para usar Python 3.7.7
 module load python_3.7.7
 # ejecution of simulator

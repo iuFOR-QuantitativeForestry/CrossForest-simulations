@@ -6,12 +6,12 @@
 # limites que se aplicaran al trabajo
 #SBATCH -q normal
 # nombre
-#SBATCH -J Python.Plot.split.real001
+#SBATCH -J Python.Plot.split.real003
 # tiempo maximo de ejecucion (p.e. 2 dias). Maximo permitido: 5 dias
 #SBATCH --time=10:00:00
 # archivos de salida y de error
-#SBATCH -o Python.Plot.split.real001-%j.o
-#SBATCH -e Python.Plot.split.real001-%j.e
+#SBATCH -o Python.Plot.split.real003-%j.o
+#SBATCH -e Python.Plot.split.real003-%j.e
 # directorio de trabajo por defecto
 #SBATCH -D .
 # notificaciones por email relacionadas con la ejecucion del trabajo
