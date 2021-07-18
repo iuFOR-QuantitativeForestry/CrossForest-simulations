@@ -1,19 +1,20 @@
 # sim001
-### complete
-100 plots, 10 array = 10 input files, 10 ppf (plots per file), 60 tpp (trees per plot)
-### test
+For all simulations, first a test is performed, and then the complete simulation
+## test
 10 plots, 1 exec = 1 input files, 10 ppf, 60 tpp
+## complete
+100 plots, 10 array = 10 input files, 10 ppf (plots per file), 60 tpp (trees per plot)
 
 ## make input files
 10 files with 10 plot each, 60 trees per plot 
-folder: /COMUNES/simanfor/data/simul/sim001/
+folder: `/scratch/uva_iufor_1/uva_iufor_1_3/simul/sim001/`
 command in HPC: 
-          ----> sbatch ~/scripts/sim001.make.input.hpc.sh 10 10 60
+          ----> `sbatch ~/scripts/sim001.make.input.hpc.sh 10 10 60`
 which do 10 call to R-script sim001.PlotsGenerator.EN.hpc.R
 
 ## make scenario files
 command in HPC: 
-          ----> ~/scripts/sim001.make.scenario.files.sh 10
+          ----> `~/scripts/sim001.make.scenario.files.sh 10`
 put files in /COMUNES/simanfor/scenario/simul/sim001 from template.json
 ### put 10 files in  /home/uva_iufor_1/COMUNES/simanfor/scenario/simul/sim001
 ### filename: scnr_sp999_${i}_10-60.json
@@ -24,14 +25,17 @@ scenario files run two growth periods, 5 years each and perform a thinning
 
 ## make simulations
 command in HPC: 
-          ----> sbatch ~/scripts/sim001.job.array.10-60.sh 
+          ----> `sbatch ~/scripts/sim001.job.array.10-60.sh `
 which do 10 array jobs for 10 scenario files: scnr_sp999_${i}_10-60.json
 
 ## summary from HPC
+
 ### ------------test
+```
 calendula Slurm Job_id=492247 Name=sm4_simul_sim001 Ended, Run time 00:04:42, COMPLETED, ExitCode 0
 2020/11/08 22:45
-#------------
+
+------------
 Job ID: 492247
 Cluster: calendula
 User/Group: uva_iufor_1_3/uva_iufor_1
@@ -42,10 +46,9 @@ CPU Efficiency: 86.52% of 00:04:42 core-walltime
 Job Wall-clock time: 00:04:42
 Memory Utilized: 123.03 MB
 Memory Efficiency: 6.35% of 1.89 GB
+------------complete
 
-### ------------complete
-
-#------------
+------------
 Job ID: 488715
 Array Job ID: 488715_10
 Cluster: calendula
@@ -57,8 +60,8 @@ CPU Efficiency: 74.91% of 00:04:47 core-walltime
 Job Wall-clock time: 00:04:47
 Memory Utilized: 123.11 MB
 Memory Efficiency: 6.36% of 1.89 GB
-#------------
-
+------------
+```
 
 
 
@@ -380,9 +383,6 @@ Job Wall-clock time: 04:37:08
 Memory Utilized: 1.41 GB
 Memory Efficiency: 74.39% of 1.89 GB
 
-
-#------------
-
 #------------
 
 
@@ -390,9 +390,9 @@ Memory Efficiency: 74.39% of 1.89 GB
 
 
 
-# sim007***********************************************************
+# sim007
 ## description
-400 plots, 16 array = 16 input files, 25 ppf, 100 tpp
+1000 plots, 200 array = 200 input files, 5 ppf, 100 tpp
 
 ## make folders and run other scripts
 command in HPC: 
@@ -412,7 +412,7 @@ scenario files run tweenty growth periods, 5 years each and perform a thinning a
 40 files with 10 plot each, 100 trees per plot 
 folder: $SCRACH/sim005/
 command in HPC: 
-          ----> sbatch ~/scripts/sim005.make.input.hpc.sh 4 100 100
+          ----> sbatch ~/scripts/sim007.make.input.hpc.sh 40 10 100
 which do 40 call to R-script PlotsGenerator.R
 
 ## make simulations
@@ -423,9 +423,45 @@ which do 4 array jobs for 4 scenario files: scnr_sp999_${i}_100-100.json
 ## summary from HPC
 #------------
 
-#------------
+
+
+# sim008
+## description
+25000 plots, 5000 array = 5000 input files, 5 ppf, 100 tpp
+
+## make folders and run other scripts
+command in HPC: 
+          ----> ~/scripts/sim008.sh
+this script run everything but the array jobs
 
 #------------
+
+
+
+
+# sim009
+## description
+90000 plots, 16 array = 90000 input files, 1 ppf, 100 tpp
+only 30000 jobs can be included in array jobs
+
+## make folders and run other scripts
+command in HPC: 
+          ----> ~/scripts/sim009.sh
+this script run everything but the array jobs
+
+#------------
+
+
+
+
+# sim010
+## description
+90000 plots, 22500 array = 22500 input files, 4 ppf, 100 tpp
+
+## make folders and run other scripts
+command in HPC: 
+          ----> ~/scripts/sim010.sh
+this script run everything but the array jobs
 
 #------------
 
