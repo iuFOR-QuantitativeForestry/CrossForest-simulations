@@ -1,4 +1,0 @@
-logger_dev:INFO tools:58: Executing operation: Inicio
-logger_:INFO tools:58: Loading load model Basic loader file from csv(1)
-logger_:INFO tools:58: Generating initial inventory
-logger_:ERROR tools:64: filename /scratch/uva_iufor_1/uva_iufor_1_3/real/real001/input/plot_pure_IFN.sps_Pnig_cat__all.P_28.csv does not exists.
