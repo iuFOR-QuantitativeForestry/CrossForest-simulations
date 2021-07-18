@@ -11,12 +11,12 @@ The scenario (`sim###.scenario.json`) is the same for all of the simulations, in
 Simulation input files is generated with `sim###.make.input.sh` which run the R script as many times as necessary and generates the scenarios based on the template.
 
 
-[Go to test simulations](./test.simulation/README.md)
+[Go to test simulations](./test.simulations/README.md)
 
 
 ## Simulations with NFI plots
 
 After testing HPC and SIMANFOR performance, we run simulations with all possible plots from Spanish NFI with 5 different scenarios
 
-[Go to real simulations](./real.simulation/README.md)
+[Go to real simulations](./real.simulations/README.md)
 
