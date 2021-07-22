@@ -21,13 +21,13 @@
 # carga de las variables necesarias para usar Python 3.7.7
 module load python_3.7.7
 
-ROOT=/home/uva_iufor_1/uva_iufor_1_2/simanfor/scripts
-OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_2/real005
+ROOT=/home/uva_iufor_1/uva_iufor_1_2/simanfor/scripts  # ruta donde se encuentra el archivo
+OUT_Dir=/scratch/uva_iufor_1/uva_iufor_1_2/real005  # ruta de salida
 
 CurrentDir=$(pwd)
 cd $OUT_Dir
 # ejecution of Python script to split excel file into individual files
 
-python $ROOT/splitInputExcel2indPlots.py /scratch/uva_iufor_1/uva_iufor_1_2/real005/ Mix.xlsx xlsx
+python $ROOT/splitInputExcel2indPlots.py /scratch/uva_iufor_1/uva_iufor_1_2/real005/  # ejecución del archivo
 
 cd $CurrentDir
