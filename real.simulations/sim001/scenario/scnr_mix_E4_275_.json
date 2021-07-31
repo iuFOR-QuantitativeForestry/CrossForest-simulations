@@ -1,0 +1,69 @@
+{
+  "name": "CROSSFOREST - Pnigra + Psylvestris E4, wood production with low fire risk",
+  "overwrite_output_file": true,
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/output/E4_Mix.sps_Mix1_PnigPsyl.P_337",
+  "decimal_numbers": 2,
+  "zip_compression": false,
+  "operations": [
+    {
+      "name": "Inicio",
+      "description": "Carga de datos",
+      "model_path": "models.load.xlsx_load",
+      "model_class": "XLSXLoad",
+      "operation": "LOAD",
+      "variables": {
+        "init": 5,
+        "time": 0,
+        "input": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real001/input/Mix.sps_Mix1_PnigPsyl.P_337.xlsx"
+      }
+    },
+    {"name": "Inicio", "description": "Inicialización de datos", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "INIT", "variables": { "time": 0}},
+
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 3, "max_age": 7}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 8, "max_age": 12}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 13, "max_age": 17}},
+    
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 18, "max_age": 22, "cut_down": "PERCENTOFTREES", "volumen": 30}},    
+    
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 18, "max_age": 22}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 23, "max_age": 27}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 28, "max_age": 32}},              
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 33, "max_age": 37}}, 
+        
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 38, "max_age": 42, "cut_down": "PERCENTOFTREES", "volumen": 30}},   
+
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 38, "max_age": 42}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 43, "max_age": 47}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 47, "max_age": 52}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 53, "max_age": 57}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 58, "max_age": 62}}, 
+       
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 63, "max_age": 68, "cut_down": "PERCENTOFTREES", "volumen": 43}},     
+    
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 63, "max_age": 67}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 68, "max_age": 72}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 73, "max_age": 77}},     
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 78, "max_age": 82}},     
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 83, "max_age": 87}},
+     
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 88, "max_age": 92, "cut_down": "PERCENTOFTREES", "volumen": 50}}, 
+    
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 88, "max_age": 92}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 93, "max_age": 97}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 98, "max_age": 102}},
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 103, "max_age": 107}},  
+
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 108, "max_age": 112, "cut_down": "PERCENTOFTREES", "volumen": 45}}, 
+
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 108, "max_age": 112}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 113, "max_age": 117}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 118, "max_age": 122}}, 
+    
+    {"name": "Corta", "description": "Corta", "model_path": "models.harvest.cut_down_by_smallest", "model_class": "CutDownBySmallest", "operation": "HARVEST", "variables": {"time": 0, "min_age": 123, "max_age": 127, "cut_down": "PERCENTOFTREES", "volumen": 55}}, 
+
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 123, "max_age": 127}},     
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 128, "max_age": 132}}, 
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 133, "max_age": 137}},  
+    {"name": "Simulacion", "description": "Ejecución modelo", "model_path": "models.trees.Mix1_PnigPsyl", "model_class": "PnigraPsylvestrisMix", "operation": "EXECUTION", "variables": { "time": 5, "min_age": 138, "max_age": 142}}
+  ]
+}
