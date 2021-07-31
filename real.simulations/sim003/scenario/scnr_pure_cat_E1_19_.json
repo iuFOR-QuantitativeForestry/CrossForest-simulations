@@ -1,7 +1,7 @@
 {
   "name": "CROSSFOREST - Psylvestris E1",
   "overwrite_output_file": true,
-  "output_path": "../../output/Psyl_cat_nat_E1__",
+  "output_path": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real003/output/E1_pure_IFN.sps_Psyl_cat_nat_.P_4",
   "decimal_numbers": 2,
   "zip_compression": false,
   "operations": [
@@ -15,8 +15,8 @@
         "init": 5,
         "time": 0,
         "input": {
-          "plots": "../../data/Psylvestris/plots_IFN_s21_cat.csv",
-          "trees": "../../data/Psylvestris/trees_IFN_s21_cat.csv"
+          "plots": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real003/input/plot_pure_IFN.sps_Psyl_cat_nat_.P_4.csv",
+          "trees": "/scratch/uva_iufor_1/uva_iufor_1_3/real/real003/input/tree_pure_IFN.sps_Psyl_cat_nat_.P_4.csv"
         }
       }
     },
