@@ -1,16 +1,15 @@
 # Cross-Forest project - Pilot CAMBrIc
 This repository has been build to develop and store the simulations developed in the framework of 
-Cross-Forest project 
-![Cross-Forest project](./logos/logo_CFt.png)
+![Cross-Forest project](https://github.com/simanfor-dask/CrossForest-simulations/blob/main/logos/logo_CFt.jpg)
 
 funded by CEF program.
-logos/en_horizontal_cef_logo_2.png)
+![CEF program](https://github.com/simanfor-dask/CrossForest-simulations/blob/main/logos/en_horizontal_cef_logo_2.png)
 
-This simulations have been made in Silviculture Group of iuFOR
-logos/iuFOR.png)
+This simulations have been made in Silviculture Group of 
+![iuFOR](https://github.com/simanfor-dask/CrossForest-simulations/blob/main/logos/iuFOR.png)
 
-with the simulator SIMANFOR
-logos/sm4_ancho.png)
+with the simulator 
+![SIMANFOR](https://github.com/simanfor-dask/CrossForest-simulations/blob/main/logos/sm4_ancho.png)
 
 ## CrossForest-simulations
 simulations performed at Caléndula HPC - scripts and notes
