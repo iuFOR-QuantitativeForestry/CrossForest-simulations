@@ -1,7 +1,8 @@
 # Cross-Forest project - Pilot CAMBrIc
 This repository has been build to develop and store the simulations developed in the framework of 
 Cross-Forest project 
-![Fig1](https://github.com/simanfor-dask/CrossForest-simulations/logos/logo_CFt.png)
+![Fig1](https://github.com/simanfor-dask/CrossForest-simulations/blob/master/logos/logo_CFt.png)
+
 funded by CEF program.
 logos/en_horizontal_cef_logo_2.png)
 
